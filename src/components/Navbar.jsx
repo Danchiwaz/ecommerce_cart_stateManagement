@@ -20,7 +20,6 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; 
-
+export default Navbar;
 
 // for the icons , am using hericons
