@@ -11,11 +11,10 @@ const initialState = {
 
 const url = "https://course-api.com/react-useReducer-cart-project";
 
-// this returns a promise 
+// this returns a promise
 export const getCartItems = createAsyncThunk("cart/getCartItems", async () => {
   try {
-    const response = await axios
-      .get(url);
+    const response = await axios.get(url);
     return response.data;
   } catch (error) {
     return console.error(error);
@@ -57,6 +56,7 @@ const cartSlice = createSlice({
       state.cartItems = [];
     },
   },
+  // handling the promise returned by the getCartItems 
   extraReducers: {
     [getCartItems.pending]: (state) => {
       state.isLoading = true;
