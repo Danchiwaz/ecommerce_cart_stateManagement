@@ -34,7 +34,7 @@ const CartContainer = () => {
             total <span>Ksh {Number(total).toFixed(0)}</span>
           </h4>
         </div>
-        <button className="btn clear-btn" onClick={() => dispatch(openModal()) }>
+        <button className="btn clear-btn" onClick={() => dispatch(openModal())}>
           clear cart
         </button>
       </footer>
